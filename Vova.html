@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог продукції</title>
+</head>
+<style>
+    .product-card {
+  width: calc(20% - 16px); 
+  box-sizing: border-box;
+}
+
+.product img {
+    width: 25rem;
+    height: 25rem;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+</style>
+<body>
+    <div class="product-list">
+        <!-- Продукт 1 -->
+        <div class="product">
+            <div class="heart"></div>
+            <img src="45593730.jpeg" alt="Продукт 1">
+            <h3>Продукт 1</h3>
+            <p>Ціна: 3900  грн</p>
+            <button>В кошик</button>
+            <button>Купити</button>
+        </div>
+
+        <!-- Продукт 2 -->
+        <div class="product inactive">
+            <div class="heart"></div>
+            <img src="Без назви.jpeg" alt="Продукт 2">
+            <h3>Продукт 2</h3>
+            <p>Немає в наявності</p>
+            <button disabled>В кошик</button>
+            <button disabled>Купити</button>
+        </div>
+
+        <!-- Продукт 3 -->
+        <div class="product">
+            <div class="heart"></div>
+            <img src="лшл.jpeg" alt="Продукт 3">
+            <h3>Продукт 3</h3>
+            <p>Ціна: 18000 грн</p>
+            <button>В кошик</button>
+            <button>Купити</button>
+        </div>
+
+        <!-- Продукт 4 -->
+        <div class="product">
+            <div class="heart"></div>
+            <img src="ппп.jpeg" alt="Продукт 4">
+            <h3>Продукт 4</h3>
+            <p>Ціна: 29000 грн</p>
+            <button>В кошик</button>
+            <button>Купити</button>
+        </div>
+
+        <!-- Продукт 5 -->
+        <div class="product">
+            <div class="heart"></div>
+            <img src="images.jpeg" alt="Продукт 5">
+            <h3>Продукт 5</h3>
+            <p>Ціна: 7999 грн</p>
+            <button>В кошик</button>
+            <button>Купити</button>
+        </div>
+    </div>
+</body>
+</html>

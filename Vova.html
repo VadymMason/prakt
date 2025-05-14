@@ -5,29 +5,49 @@
     <title>Каталог продукції</title>
 </head>
 <style>
-    .product-card {
-  width: calc(20% - 16px); 
-  box-sizing: border-box;
-}
-
-.product img {
-    width: 25rem;
-    height: 25rem;
-}
 body {
   font-family: Arial, sans-serif;
   background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 30px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 220px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.selected {
+    border: green solid 0.1rem;
+    
+}
+.heart {
+    position: absolute;
 }
 </style>
 <body>
     <div class="product-list">
         <!-- Продукт 1 -->
-        <div class="product">
-            <div class="heart"></div>
+        <div class="product" onclick="selectProduct(event)">
+            <div class="heart">♥</div>
             <img src="45593730.jpeg" alt="Продукт 1">
             <h3>Продукт 1</h3>
             <p>Ціна: 3900  грн</p>
@@ -36,7 +56,7 @@ body {
         </div>
 
         <!-- Продукт 2 -->
-        <div class="product inactive">
+        <div class="product inactive" onclick="selectProduct(event)">
             <div class="heart"></div>
             <img src="Без назви.jpeg" alt="Продукт 2">
             <h3>Продукт 2</h3>
@@ -46,7 +66,7 @@ body {
         </div>
 
         <!-- Продукт 3 -->
-        <div class="product">
+        <div class="product" onclick="selectProduct(event)">
             <div class="heart"></div>
             <img src="лшл.jpeg" alt="Продукт 3">
             <h3>Продукт 3</h3>
@@ -56,7 +76,7 @@ body {
         </div>
 
         <!-- Продукт 4 -->
-        <div class="product">
+        <div class="product" onclick="selectProduct(event)">
             <div class="heart"></div>
             <img src="ппп.jpeg" alt="Продукт 4">
             <h3>Продукт 4</h3>
@@ -66,7 +86,7 @@ body {
         </div>
 
         <!-- Продукт 5 -->
-        <div class="product">
+        <div class="product" onclick="selectProduct(event)">
             <div class="heart"></div>
             <img src="images.jpeg" alt="Продукт 5">
             <h3>Продукт 5</h3>
@@ -75,5 +95,26 @@ body {
             <button>Купити</button>
         </div>
     </div>
+<script>
+    function selectProduct(event) {
+      var product = event.currentTarget;
+
+      product.classList.toggle("selected");
+    }
+
+    function alertSelected() {
+      var selectedElements;
+
+      selectedElements = document.getElementsByClassName("selected");
+
+      var message = '';
+
+      for (let i = 0; i < selectedElements.length; i++) {
+        message += selectedElements[i].innerText + '\n';
+      }
+
+      alert(message);
+    }
+</script>
 </body>
 </html>
